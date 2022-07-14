@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { makeStyles } from "@material-ui/core/styles";
+import { Box } from "@material-ui/core";
+import React from "react";
+import DetailList from "./DetailList";
+import DropList from "./DropList";
 
-function App() {
+const useStyles = makeStyles({
+  rootCounting: {
+    padding: "24px 32px 60px",
+  },
+});
+
+export default function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className={classes.rootCounting}>
+      <DropList />
+    </Box>
   );
 }
-
-export default App;
