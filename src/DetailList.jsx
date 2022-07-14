@@ -123,6 +123,20 @@ const rows = [
   ),
 ];
 
+const headerCells = [
+  "STT",
+  "Ngày",
+  "Giờ vào",
+  "Giờ ra",
+  "ID khách hàng",
+  "Tên khách hàng",
+  "Giới tính",
+  "Tuổi",
+  "KH",
+  "Hình ảnh khách hàng",
+  "Event ghi nhận",
+];
+
 function DetailList() {
   const classes = useStyles();
 
@@ -131,39 +145,15 @@ function DetailList() {
       <Table aria-label="simple table">
         <TableHead>
           <TableRow style={{ height: "60px" }}>
-            <TableCell className={classes.headerCell} align="center">
-              STT
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Ngày
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Giờ vào
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Giờ ra
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              ID khách hàng
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Tên khách hàng
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Giới tính
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Tuổi
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              KH
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Hình ảnh khách hàng
-            </TableCell>
-            <TableCell className={classes.headerCell} align="center">
-              Event ghi nhận
-            </TableCell>
+            {headerCells.map((headerCell) => (
+              <TableCell
+                className={classes.headerCell}
+                align="center"
+                key={headerCell}
+              >
+                {headerCell}
+              </TableCell>
+            ))}
           </TableRow>
         </TableHead>
         <TableBody>

@@ -2,8 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box } from "@material-ui/core";
 import React from "react";
 import DetailList from "./DetailList";
-import DropList from "./DropList";
-import Chart from "./Chart";
+import TimeCard from "./TimeCard";
 
 const useStyles = makeStyles({
   rootCounting: {
@@ -15,8 +14,7 @@ export default function App() {
   const classes = useStyles();
   return (
     <Box className={classes.rootCounting}>
-      <Chart />
-      <DropList />
+      <TimeCard />
     </Box>
   );
 }

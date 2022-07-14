@@ -1,19 +1,5 @@
 import React from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  AreaChart,
-  Area,
-  ReferenceLine,
-  BarChart,
-  Bar,
-  Rectangle,
-} from "recharts";
+import { XAxis, YAxis, Tooltip, Legend, BarChart, Bar } from "recharts";
 
 const data = [
   {
