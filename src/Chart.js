@@ -1,3 +1,4 @@
+import { Box } from "@material-ui/core";
 import React from "react";
 import { XAxis, YAxis, Tooltip, Legend, BarChart, Bar } from "recharts";
 
@@ -97,7 +98,7 @@ const renderLegend = () => {
 
 export default function Chart() {
   return (
-    <div style={{ padding: "50px" }}>
+    <Box>
       <BarChart width={1110} height={282.5} data={data} barGap={0}>
         <XAxis
           dataKey="name"
@@ -122,6 +123,6 @@ export default function Chart() {
         <Bar dataKey="pv" fill="#e7e7e8" barSize={32} />
         <Bar dataKey="uv" fill="#ffa0a9" barSize={32} />
       </BarChart>
-    </div>
+    </Box>
   );
 }

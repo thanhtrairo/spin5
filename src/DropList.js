@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { useCallback } from "react";
 import { useMemo } from "react";
 
@@ -22,6 +23,7 @@ const useStyles = makeStyles({
   },
   dropWrapper: {
     position: "absolute",
+    zIndex: 10,
     top: 52,
     left: 0,
     right: 0,
@@ -54,6 +56,9 @@ const useStyles = makeStyles({
       backgroundColor: "#f6f4f5",
       borderRadius: "8px",
     },
+    "&:hover p": {
+      color: "#ec1b2e",
+    },
     padding: "10px 14px 9px 15px",
     display: "flex",
     justifyContent: "space-between",
@@ -81,9 +86,24 @@ function DropList() {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
-  const [textSelect, setTextSelect] = useState("status1");
-  const [selectItems, setSelectItems] = useState([]);
+  const [textSelect, setTextSelect] = useState(dataDropList[0]);
+  const [selectItems, setSelectItems] = useState([dataDropList[0]]);
   const [selectAll, setSelectAll] = useState(false);
+
+  useEffect(() => {
+    if (selectItems.length === 1) {
+      setTextSelect(selectItems[0]);
+    } else if (
+      selectItems.length > 1 &&
+      selectItems.length !== dataDropList.length
+    ) {
+      setTextSelect("Multichoice");
+    } else if (selectItems.length === dataDropList.length) {
+      setTextSelect("All");
+    } else {
+      setTextSelect("Select status");
+    }
+  }, [selectItems]);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -93,14 +113,27 @@ function DropList() {
     setOpen(false);
   };
 
-  const handleSelectAll = () => {};
+  const handleSelectAll = (checked) => {
+    if (checked) {
+      setSelectItems(dataDropList);
+    } else {
+      setSelectItems([]);
+    }
+    setSelectAll(checked);
+  };
 
   const handleSelectItem = (value, exist) => {
     let newValue = selectItems || [];
-    if (!exist) newValue = [...selectItems, value];
-    else newValue = selectItems.filter((item) => item !== value);
-    if (newValue.length === dataDropList.length) setSelectAll(true);
-    else setSelectAll(false);
+    if (!exist) {
+      newValue = [...selectItems, value];
+    } else {
+      newValue = selectItems.filter((item) => item !== value);
+    }
+    if (newValue.length === dataDropList.length) {
+      setSelectAll(true);
+    } else {
+      setSelectAll(false);
+    }
     setSelectItems(newValue);
   };
 
@@ -122,10 +155,13 @@ function DropList() {
               <List>
                 <ListItem
                   className={classes.listItem}
-                  onClick={() => handleSelectAll()}
+                  onClick={() => handleSelectAll(!selectAll)}
                 >
                   <Typography className={classes.itemLabel}>All</Typography>
-                  <Checkbox className={classes.itemCheckbox} />
+                  <Checkbox
+                    className={classes.itemCheckbox}
+                    checked={selectAll}
+                  />
                 </ListItem>
                 {dataDropList.map((item) => {
                   const exist = isItemSelect(item);
@@ -135,8 +171,13 @@ function DropList() {
                       className={classes.listItem}
                       onClick={() => handleSelectItem(item, exist)}
                     >
-                      <Typography>{item}</Typography>
-                      <Checkbox className={classes.itemCheckbox} />
+                      <Typography className={classes.itemLabel}>
+                        {item}
+                      </Typography>
+                      <Checkbox
+                        className={classes.itemCheckbox}
+                        checked={exist}
+                      />
                     </ListItem>
                   );
                 })}
@@ -145,7 +186,7 @@ function DropList() {
           </Box>
         </Box>
       );
-  }, [open]);
+  }, [open, selectItems]);
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <Box className={classes.container}>

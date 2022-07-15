@@ -18,20 +18,21 @@ const useStyles = makeStyles({
     fontSize: "14px",
     color: "black",
     boxSizing: "border-box",
+    padding: "11px 0 10px",
   },
   imageCustomer: {
     width: 110,
     height: 80,
   },
   headerCell: {
-    fontWeight: "bold",
-    padding: 0,
-    borderBottom: "0.5px solid #8d8e91",
+    fontWeight: "bold ",
+    padding: "0 ",
+    borderBottom: "0.5px solid #8d8e91 ",
   },
   bodyCell: {
-    fontWeight: 500,
-    padding: 0,
-    borderBottom: "0.5px solid #8d8e91",
+    fontWeight: "500 ",
+    padding: "0 ",
+    borderBottom: "0.5px solid #8d8e91 ",
   },
   iconEvent: {
     width: 24,

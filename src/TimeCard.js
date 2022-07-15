@@ -6,43 +6,31 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
-import GetAppIcon from "@material-ui/icons/GetApp";
-import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles({
   table: {
-    maxWidth: "1135.5px",
-    borderRadius: "8px",
-    backgroundColor: "#f6f4f5",
+    maxWidth: 1135.5,
+    backgroundColor: "#fff",
     fontSize: "14px",
     color: "black",
     boxSizing: "border-box",
-  },
-  imageCustomer: {
-    width: 110,
-    height: 80,
+    fontWeight: 500,
   },
   headerCell: {
-    fontWeight: "bold",
-    padding: 0,
-    borderBottom: "0.5px solid #8d8e91",
+    padding: "0 0 20px",
+    border: "none",
+    height: 44.5,
+  },
+  bodyThCell: {
+    border: "none",
+    height: 32,
+    padding: "0 16px 0 0",
   },
   bodyCell: {
-    fontWeight: 500,
     padding: 0,
-    borderBottom: "0.5px solid #8d8e91",
-  },
-  iconEvent: {
-    width: 24,
-    height: 24,
-    color: "#ec1b2e",
-  },
-  rootIcon: {
-    display: "flex",
-    flexDirection: "column",
-    gap: 16,
-    alignItems: "center",
+    border: "solid 1px #e7e7e8",
+    width: 149,
+    height: 32,
   },
 });
 
@@ -57,46 +45,214 @@ const headerCells = [
   "Sunday",
 ];
 
+const statusColor = ["#fff", "#faedee", "#ffd8dc", "#ffa0a9"];
+
 const bodyCell = [
   {
-    number: [0, 1, 4, 2, 4, 4, 5],
-    status: [0, 3, 4, 2, 1, 4, 2],
+    body: [
+      {
+        number: 0,
+        status: 1,
+      },
+      {
+        number: 0,
+        status: 2,
+      },
+      {
+        number: 0,
+        status: 4,
+      },
+      {
+        number: 0,
+        status: 1,
+      },
+      {
+        number: 0,
+        status: 1,
+      },
+      {
+        number: 0,
+        status: 3,
+      },
+      {
+        number: 0,
+        status: 1,
+      },
+    ],
     id: 1,
-    hour: 1,
+    hour: "1am",
   },
   {
-    number: [0, 1, 4, 2, 4, 4, 5],
-    status: [0, 3, 4, 2, 1, 4, 2],
-    id: 1,
-    hour: 2,
+    body: [
+      {
+        number: 1,
+        status: 3,
+      },
+      {
+        number: 1,
+        status: 2,
+      },
+      {
+        number: 1,
+        status: 4,
+      },
+      {
+        number: 1,
+        status: 4,
+      },
+      {
+        number: 1,
+        status: 1,
+      },
+      {
+        number: 1,
+        status: 3,
+      },
+      {
+        number: 1,
+        status: 2,
+      },
+    ],
+    id: 2,
+    hour: "2am",
   },
   {
-    number: [0, 1, 4, 2, 4, 4, 5],
-    status: [0, 3, 4, 2, 1, 4, 2],
-    id: 1,
-    hour: 3,
+    body: [
+      {
+        number: 2,
+        status: 1,
+      },
+      {
+        number: 2,
+        status: 2,
+      },
+      {
+        number: 2,
+        status: 1,
+      },
+      {
+        number: 2,
+        status: 1,
+      },
+      {
+        number: 2,
+        status: 1,
+      },
+      {
+        number: 2,
+        status: 2,
+      },
+      {
+        number: 2,
+        status: 1,
+      },
+    ],
+    id: 3,
+    hour: "3am",
   },
   {
-    number: [0, 1, 4, 2, 4, 4, 5],
-    status: [0, 3, 4, 2, 1, 4, 2],
-    id: 1,
-    hour: 4,
+    body: [
+      {
+        number: 3,
+        status: 3,
+      },
+      {
+        number: 3,
+        status: 2,
+      },
+      {
+        number: 3,
+        status: 4,
+      },
+      {
+        number: 3,
+        status: 3,
+      },
+      {
+        number: 3,
+        status: 1,
+      },
+      {
+        number: 3,
+        status: 3,
+      },
+      {
+        number: 3,
+        status: 1,
+      },
+    ],
+    id: 4,
+    hour: "4am",
   },
   {
-    number: [0, 1, 4, 2, 4, 4, 5],
-    status: [0, 3, 4, 2, 1, 4, 2],
-    id: 1,
-    hour: 5,
+    body: [
+      {
+        number: 4,
+        status: 2,
+      },
+      {
+        number: 4,
+        status: 2,
+      },
+      {
+        number: 4,
+        status: 4,
+      },
+      {
+        number: 4,
+        status: 4,
+      },
+      {
+        number: 4,
+        status: 1,
+      },
+      {
+        number: 4,
+        status: 3,
+      },
+      {
+        number: 4,
+        status: 1,
+      },
+    ],
+    id: 5,
+    hour: "5am",
   },
   {
-    number: [0, 1, 4, 2, 4, 4, 5],
-    status: [0, 3, 4, 2, 1, 4, 2],
-    id: 1,
-    hour: 6,
+    body: [
+      {
+        number: 5,
+        status: 1,
+      },
+      {
+        number: 5,
+        status: 2,
+      },
+      {
+        number: 5,
+        status: 4,
+      },
+      {
+        number: 5,
+        status: 2,
+      },
+      {
+        number: 5,
+        status: 4,
+      },
+      {
+        number: 5,
+        status: 3,
+      },
+      {
+        number: 5,
+        status: 1,
+      },
+    ],
+    id: 6,
+    hour: "6am",
   },
 ];
-
-const headerColumnsCell = ["1", "2", "3", "4", "5", "6"];
 
 function TimeCard() {
   const classes = useStyles();
@@ -105,7 +261,7 @@ function TimeCard() {
     <TableContainer className={classes.table}>
       <Table aria-label="simple table">
         <TableHead>
-          <TableRow style={{ height: "60px" }}>
+          <TableRow>
             {headerCells.map((headerCell) => (
               <TableCell
                 className={classes.headerCell}
@@ -119,17 +275,18 @@ function TimeCard() {
         </TableHead>
         <TableBody>
           {bodyCell.map((row) => (
-            <TableRow key={row.id} style={{ height: "100px" }}>
-              <TableCell className={classes.bodyCell} align="center">
+            <TableRow key={row.id}>
+              <TableCell className={classes.bodyThCell} align="right">
                 {row.hour}
               </TableCell>
-              {row.number.map((number) => (
+              {row.body.map((item) => (
                 <TableCell
                   className={classes.bodyCell}
                   align="center"
-                  key={number}
+                  key={item}
+                  style={{ backgroundColor: `${statusColor[item.status + 1]}` }}
                 >
-                  {number}
+                  {item.number}
                 </TableCell>
               ))}
             </TableRow>
