@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #f15562;
+      }
+
+      .cls-1 {
+        stroke: #939393;
+      }
+
+      .cls-2 {
+        fill: #ffd8dc;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_55" data-name="Rectangle 55" class="cls-1" width="24" height="24" transform="translate(1019 274)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_2804" data-name="Group 2804" transform="translate(-1003 -258)">
+    <circle id="Ellipse_6" data-name="Ellipse 6" class="cls-2" cx="28" cy="28" r="28" transform="translate(1003 258)"/>
+    <g id="Mask_Group_213" data-name="Mask Group 213" class="cls-3">
+      <path id="dollar-circle" class="cls-4" d="M14.4,2.4a12,12,0,1,0,12,12A12,12,0,0,0,14.4,2.4Zm2.64,16.643a3.12,3.12,0,0,1-1.77.88V20.4a.9.9,0,1,1-1.8,0v-.48a3.143,3.143,0,0,1-2.621-2.752.9.9,0,1,1,1.788-.2,1.35,1.35,0,0,0,1.339,1.2h.84a1.348,1.348,0,0,0,.326-2.654l-1.93-.48a3.17,3.17,0,0,1-1.721-1.122A3.138,3.138,0,0,1,13.474,8.88V8.4a.9.9,0,0,1,1.8,0v.48a3.14,3.14,0,0,1,2.674,2.76.9.9,0,1,1-1.788.2,1.35,1.35,0,0,0-1.339-1.2h-.84a1.348,1.348,0,0,0-1.346,1.346,1.32,1.32,0,0,0,.28.822,1.344,1.344,0,0,0,.74.486l1.93.48a3.145,3.145,0,0,1,1.46,5.28Z" transform="translate(1016.6 271.6)"/>
+    </g>
+  </g>
+</svg>

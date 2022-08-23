@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+    <defs>
+        <clipPath id="9g53d9q6ka">
+            <path data-name="Rectangle 56" transform="translate(-.413 -.414)" style="stroke:#939393;fill:#f19d6c" d="M0 0h24v24H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Group 2805" transform="translate(-1232 -256)">
+        <circle data-name="Ellipse 5" cx="28" cy="28" r="28" transform="translate(1232 256)" style="fill:#f8e8d7"/>
+        <g data-name="Mask Group 222" transform="translate(1248.413 272.414)" style="clip-path:url(#9g53d9q6ka)">
+            <path data-name="Path 3111" d="M19.635 15.464H7.212a1.31 1.31 0 0 1-1.263-1.153l-.031-.346h11.217a2.633 2.633 0 0 0 2.57-2.347l.576-6.341a2.236 2.236 0 0 0-2.251-2.465H4.9l-.042-.465A2.6 2.6 0 0 0 2.353 0H.656a.656.656 0 0 0 0 1.313h1.7a1.277 1.277 0 0 1 1.2 1.153L4.642 14.43a2.633 2.633 0 0 0 2.57 2.347h12.423a.656.656 0 1 0 0-1.312zM9.518 8.045a.656.656 0 0 1 .928 0l.868.868V6.28a.656.656 0 0 1 1.313 0v2.633l.868-.868a.656.656 0 0 1 .928.928l-1.988 1.988a.656.656 0 0 1-.928 0L9.518 8.973a.656.656 0 0 1 0-.928zm0 0" style="fill:#f19d6c" transform="translate(1.441 .386)"/>
+            <path data-name="Path 3112" d="M17.812 19.581a2.062 2.062 0 1 0 2.062 2.062 2.065 2.065 0 0 0-2.062-2.062zm0 0" transform="translate(.391 -.919)" style="fill:#f19d6c"/>
+            <path data-name="Path 3113" d="M8.775 19.581a2.062 2.062 0 1 0 2.062 2.062 2.065 2.065 0 0 0-2.062-2.062zm0 0" transform="translate(.993 -.919)" style="fill:#f19d6c"/>
+        </g>
+    </g>
+</svg>

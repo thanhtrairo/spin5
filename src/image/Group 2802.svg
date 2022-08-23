@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+    <defs>
+        <clipPath id="i2lqwjskva">
+            <path data-name="Rectangle 53" transform="translate(557 290)" style="stroke:#939393;fill:#f19d6c" d="M0 0h24v24H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Group 2802" transform="translate(-541 -258)">
+        <circle data-name="Ellipse 2" cx="28" cy="28" r="28" transform="translate(541 258)" style="fill:#f8e8d7"/>
+        <g data-name="Mask Group 210" transform="translate(0 -16)" style="clip-path:url(#i2lqwjskva)">
+            <g data-name="Group 2708">
+                <path data-name="Path 2942" d="M10.415 5.31a.7.7 0 0 0 0-.994L6.3.206a.7.7 0 0 0-.994 0L1.2 4.316a.7.7 0 0 0 0 .994l.994.994a.7.7 0 0 0 .994 0l1.2-1.2V9.8A5.391 5.391 0 1 0 7.2 9.792V5.079L8.426 6.3a.7.7 0 0 0 .994 0zm-4.607 7.112A2.578 2.578 0 1 1 3.229 15a2.581 2.581 0 0 1 2.579-2.578z" style="fill:#f19d6c" transform="translate(557 290)"/>
+            </g>
+            <g data-name="Group 2715">
+                <g data-name="Group 2710">
+                    <g data-name="Group 2709">
+                        <path data-name="Path 2943" d="M23.3 9.938a5.391 5.391 0 1 0-6.8 5.2v3.7h-1.641a.7.7 0 0 0-.7.7v1.406a.7.7 0 0 0 .7.7H16.5v1.615a.726.726 0 0 0 .7.729h1.413a.7.7 0 0 0 .7-.7v-1.632h1.641a.715.715 0 0 0 .7-.751V19.5a.7.7 0 0 0-.7-.656h-1.641v-3.7a5.4 5.4 0 0 0 3.984-5.2zm-7.969 0a2.578 2.578 0 1 1 2.578 2.578 2.581 2.581 0 0 1-2.581-2.578z" style="fill:#f19d6c" transform="translate(557.286 289.062)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

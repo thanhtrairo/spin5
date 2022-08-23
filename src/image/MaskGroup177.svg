@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <clipPath id="ne4lutuela">
+            <path data-name="Rectangle 2428" transform="translate(518 840)" style="stroke:#707070;fill:#8d8e91" d="M0 0h24v24H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="Mask Group 177" transform="translate(-518 -840)" style="clip-path:url(#ne4lutuela)">
+        <g data-name="Group 2509">
+            <g data-name="Group 2508">
+                <path data-name="Path 2902" d="M18.083 11.589v3.924h2a.593.593 0 0 0 .568-.423l1.042-3.5h-3.61z" transform="translate(516.986 840.068)" style="fill:#8d8e91"/>
+            </g>
+        </g>
+        <g data-name="Group 2511">
+            <g data-name="Group 2510">
+                <path data-name="Rectangle 2429" style="fill:#8d8e91" d="M0 0h3.99v3.924H0z" transform="translate(529.895 846.548)"/>
+            </g>
+        </g>
+        <g data-name="Group 2513">
+            <g data-name="Group 2512">
+                <path data-name="Path 2903" d="M22.9 5.7a.592.592 0 0 0-.475-.238h-4.342v3.92h3.964l.942-3.162a.592.592 0 0 0-.089-.52z" transform="translate(516.986 841.09)" style="fill:#8d8e91"/>
+            </g>
+        </g>
+        <g data-name="Group 2515">
+            <g data-name="Group 2514">
+                <path data-name="Rectangle 2430" style="fill:#8d8e91" d="M0 0h3.99v3.924H0z" transform="translate(529.895 851.657)"/>
+            </g>
+        </g>
+        <g data-name="Group 2517">
+            <g data-name="Group 2516">
+                <path data-name="Path 2904" d="m4.328 4.838-.8-2.677a.593.593 0 0 0-.568-.423H.593a.593.593 0 1 0 0 1.185h1.928l.794 2.664.008.026.937 3.149h4.45V4.838z" transform="translate(520 841.71)" style="fill:#8d8e91"/>
+            </g>
+        </g>
+        <g data-name="Group 2519">
+            <g data-name="Group 2518">
+                <path data-name="Path 2905" d="M18.877 17.771h-.763a2.119 2.119 0 0 0-4.07 0H10.9a2.119 2.119 0 0 0-4.07 0h-.589a1.129 1.129 0 0 1 0-2.259h3.123v-3.923h-4.1l.817 2.744a2.314 2.314 0 0 0 .157 4.623h.588a2.119 2.119 0 0 0 4.07 0h3.144a2.119 2.119 0 0 0 4.07 0h.763a.593.593 0 0 0 0-1.185z" transform="translate(519.345 840.068)" style="fill:#8d8e91"/>
+            </g>
+        </g>
+    </g>
+</svg>
