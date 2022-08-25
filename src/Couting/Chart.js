@@ -69,7 +69,7 @@ const res = {
   ],
 }
 
-const data = [
+const dataWeek = [
   {
     name: 'Monday',
     uv: 40,
@@ -107,6 +107,159 @@ const data = [
   },
 ]
 
+const dataMonth = [
+  {
+    name: '01',
+    uv: 40,
+    pv: 24,
+  },
+  {
+    name: '02',
+    uv: 30,
+    pv: 13,
+  },
+  {
+    name: '03',
+    uv: 20,
+    pv: 48,
+  },
+  {
+    name: '04',
+    uv: 27,
+    pv: 39,
+  },
+  {
+    name: '05',
+    uv: 18,
+    pv: 48,
+  },
+  {
+    name: '06',
+    uv: 23,
+    pv: 38,
+  },
+  {
+    name: '07',
+    uv: 34,
+    pv: 20,
+  },
+  {
+    name: '08',
+    uv: 34,
+    pv: 20,
+  },
+  {
+    name: '09',
+    uv: 40,
+    pv: 20,
+  },
+  {
+    name: '10',
+    uv: 34,
+    pv: 30,
+  },
+  {
+    name: '11',
+    uv: 24,
+    pv: 20,
+  },
+  {
+    name: '12',
+    uv: 33,
+    pv: 42,
+  },
+  {
+    name: '13',
+    uv: 14,
+    pv: 40,
+  },
+  {
+    name: '14',
+    uv: 27,
+    pv: 30,
+  },
+  {
+    name: '15',
+    uv: 31,
+    pv: 20,
+  },
+  {
+    name: '16',
+    uv: 32,
+    pv: 23,
+  },
+  {
+    name: '17',
+    uv: 34,
+    pv: 26,
+  },
+  {
+    name: '18',
+    uv: 29,
+    pv: 29,
+  },
+  {
+    name: '19',
+    uv: 25,
+    pv: 20,
+  },
+  {
+    name: '20',
+    uv: 35,
+    pv: 20,
+  },
+  {
+    name: '21',
+    uv: 45,
+    pv: 20,
+  },
+  {
+    name: '22',
+    uv: 34,
+    pv: 15,
+  },
+  {
+    name: '23',
+    uv: 16,
+    pv: 20,
+  },
+  {
+    name: '24',
+    uv: 34,
+    pv: 35,
+  },
+  {
+    name: '25',
+    uv: 34,
+    pv: 17,
+  },
+  {
+    name: '26',
+    uv: 34,
+    pv: 45,
+  },
+  {
+    name: '27',
+    uv: 21,
+    pv: 20,
+  },
+  {
+    name: '28',
+    uv: 34,
+    pv: 24,
+  },
+  {
+    name: '29',
+    uv: 34,
+    pv: 43,
+  },
+  {
+    name: '30',
+    uv: 31,
+    pv: 20,
+  },
+]
+
 const CustomTooltip = ({ active, payload, label }) => {
   const classes = useStyles()
   if (active && payload && payload.length) {
@@ -116,7 +269,7 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null
 }
 
-function Chart() {
+function Chart({ typeDate }) {
   const classes = useStyles()
 
   const [isPrevTime, setIsPrevTime] = useState(false)
@@ -141,12 +294,12 @@ function Chart() {
           }}
         >
           <Box style={{ display: 'flex', alignItems: 'center' }}>
-            <Box className={classes.iconLabel} style={{ backgroundColor: '#e2e2e2' }}></Box>
+            <Box className={classes.iconLabel}></Box>
             <Box className={classes.textLabel}>Selected time</Box>
           </Box>
           <Box style={{ display: 'flex', alignItems: 'center' }}>
             <Checkbox checked={isPrevTime} onChange={() => setIsPrevTime(!isPrevTime)} style={{ transform: 'scale(1.16)' }} />
-            <Box className={classes.iconLabel}></Box>
+            <Box className={classes.iconLabel} style={{ backgroundColor: '#e2e2e2' }}></Box>
             <Box className={classes.textLabel}>Previous time</Box>
           </Box>
         </Box>
@@ -155,7 +308,7 @@ function Chart() {
           <img src={group248} alt="" style={{ width: 24, height: 24 }} />
         </Box>
       </Box>
-      <BarChart width={1110} height={282.5} data={data} barGap={0}>
+      <BarChart width={typeDate === 'week' ? 1072 : 1050} height={240} data={typeDate === 'week' ? dataWeek : dataMonth} barGap={0}>
         <XAxis
           dataKey="name"
           tick={{ fill: '#333333' }}
@@ -163,6 +316,7 @@ function Chart() {
           tickLine={false}
           axisLine={{ stroke: '#ebebeb' }}
           width={1040}
+          padding={{ left: 20 }}
           style={{
             fontFamily: 'Sarabun',
             fontSize: '14px',
@@ -171,7 +325,7 @@ function Chart() {
         <YAxis
           type="number"
           domain={[0, 50]}
-          height={218.5}
+          height={210}
           tickCount={6}
           tick={{ fill: '#333333' }}
           tickMargin={16}
@@ -180,14 +334,15 @@ function Chart() {
           style={{
             fontFamily: 'Sarabun',
             fontSize: '14px',
+            marginRight: 30,
           }}
         />
         <Tooltip content={<CustomTooltip />} />
-        {isPrevTime && <Bar dataKey="pv" fill="#e2e2e2" barSize={32} />}
-        <Bar dataKey="uv" fill="#56b26e" barSize={32} />
+        {isPrevTime && <Bar dataKey="pv" fill="#e2e2e2" barSize={typeDate === 'week' ? 32 : 8} />}
+        <Bar dataKey="uv" fill="#56b26e" barSize={typeDate === 'week' ? 32 : 8} />
       </BarChart>
     </Box>
   )
 }
 
-export default memo(Chart)
+export default Chart

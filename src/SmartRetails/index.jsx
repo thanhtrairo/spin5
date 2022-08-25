@@ -48,6 +48,7 @@ const useStyles = makeStyles({
     borderBottom: '1px solid #8d8e91',
     '& .MuiTabs-indicator': {
       backgroundColor: '#dd3d4b',
+      height: 4,
     },
     '& .MuiTab-wrapper': {
       textTransform: 'capitalize',
@@ -82,7 +83,7 @@ const a11yProps = (index) => {
   }
 }
 
-const NavTabs = () => {
+const NavTabs = ({ typeDate }) => {
   const classes = useStyles()
   const [value, setValue] = useState(0)
   const [date, setDate] = useState('week')
@@ -102,9 +103,9 @@ const NavTabs = () => {
       </AppBar>
       <Box style={{ marginTop: 15.5 }}>
         <TabPanel value={value} index={0}>
-          <Chart />
+          <Chart typeDate={typeDate} />
           <Box style={{ marginTop: 12 }}>
-            <TimeCard value={date} />
+            <TimeCard value={date} typeDate={typeDate} />
           </Box>
         </TabPanel>
         <TabPanel value={value} index={1}>
@@ -120,6 +121,8 @@ const NavTabs = () => {
 
 function SmartDetail() {
   const classes = useStyles()
+  const [typeDate, setTypeDate] = useState('week')
+
   return (
     <Box>
       <Box className={classes.bodyTop}>
@@ -132,10 +135,16 @@ function SmartDetail() {
         </Box>
         <Box style={{ display: 'flex', alignItems: 'center' }}>
           <Box style={{ marginRight: 64 }}>
-            <Button className={classes.buttonCustom} style={{ backgroundColor: '#ffd8dc', color: '#dd3d4b', marginRight: 16 }}>
+            <Button
+              className={classes.buttonCustom}
+              style={{ backgroundColor: '#ffd8dc', color: '#dd3d4b', marginRight: 16 }}
+              onClick={() => setTypeDate('week')}
+            >
               Last 7 days
             </Button>
-            <Button className={classes.buttonCustom}>Last 30 days</Button>
+            <Button className={classes.buttonCustom} onClick={() => setTypeDate('month')}>
+              Last 30 days
+            </Button>
           </Box>
           <Box>
             <Typography className={classes.labelRetail}>Date</Typography>
@@ -144,7 +153,7 @@ function SmartDetail() {
       </Box>
       <Box style={{ display: 'flex' }}>
         <Box className={classes.bodyBottom}>
-          <NavTabs />
+          <NavTabs typeDate={typeDate} />
           <Link
             onClick={(e) => e.preventDefault()}
             style={{ cursor: 'pointer', color: '#dd3d4b', fontWeight: 500, letterSpacing: 'normal', marginTop: 9, display: 'block', textAlign: 'right' }}
